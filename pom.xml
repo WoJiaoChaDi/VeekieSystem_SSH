@@ -27,9 +27,10 @@
     <jacksonVersion>2.5.3</jacksonVersion>
     <mysqlVersion>5.1.38</mysqlVersion>
     <c3p0Version>0.9.1.2</c3p0Version>
-    <log4jVersion>1.2.14</log4jVersion>
     <fileuploadVersion>1.3.1</fileuploadVersion>
     <lombokVersion>1.16.10</lombokVersion>
+    <slf4j.version>1.7.7</slf4j.version>  
+    <log4j.version>1.2.17</log4j.version>
   </properties>
 
   <dependencies>
@@ -148,11 +149,21 @@
       <version>${jacksonVersion}</version>
     </dependency>
 
-    <!-- log4j配置, 视情况添加-->
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>${log4jVersion}</version>
+    <!-- 日志文件管理包 --> 
+    <dependency>  
+          <groupId>log4j</groupId>  
+          <artifactId>log4j</artifactId>  
+           <version>${log4j.version}</version>  
+     </dependency> 
+    <dependency>  
+            <groupId>org.slf4j</groupId>  
+            <artifactId>slf4j-api</artifactId>  
+            <version>${slf4j.version}</version>  
+      </dependency>  
+      <dependency>  
+            <groupId>org.slf4j</groupId>  
+            <artifactId>slf4j-log4j12</artifactId>  
+            <version>${slf4j.version}</version> 
     </dependency>
 
     <!--文件 上传-->
